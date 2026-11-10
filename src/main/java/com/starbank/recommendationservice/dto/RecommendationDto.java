@@ -12,15 +12,12 @@ public class RecommendationDto {
         this.name = name;
         this.text = text;
     }
-
     public UUID getId() {
         return id;
     }
-
     public String getName() {
         return name;
     }
-
     public String getText() {
         return text;
     }
