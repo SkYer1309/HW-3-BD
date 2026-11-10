@@ -16,7 +16,6 @@ public class RecommendationController {
     public RecommendationController(RecommendationService service) {
         this.service = service;
     }
-
     @GetMapping("/recommendation/{user_id}")
     public ResponseEntity<UserRecommendationResponse> getRecommendations(@PathVariable("user_id") UUID userId) {
         UserRecommendationResponse response = service.getRecommendations(userId);
