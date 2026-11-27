@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: SkYer1309
+      changes:
+        - createTable:
+            tableName: recommendation_rules
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  defaultValueComputed: gen_random_uuid()
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: product_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: product_id
+                  type: uuid
+                  constraints:
+                    nullable: false
+              - column:
+                  name: product_text
+                  type: text
+                  constraints:
+                    nullable: false
+              - column:
+                  name: rule_json
+                  type: jsonb
+                  constraints:
+                    nullable: false
